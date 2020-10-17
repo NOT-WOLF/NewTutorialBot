@@ -5,7 +5,7 @@ const prefix = config.prefix;
 const bot = new Discord.Client({
   disableMentions: "everyone",
   partials: ["REACTION"],
-});
+}); ////
 const mongoose = require("mongoose");
 bot.prefix = prefix;
 bot.commands = new Discord.Collection();
@@ -43,3 +43,4 @@ bot.on("messageReactionRemove", (reaction, user) => {
   require("./events/guild/messageReactionRemove")(reaction, user);
 });
 bot.login(token.Token);
+ 
